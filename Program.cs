@@ -110,7 +110,7 @@ static void ShowUnderMaintenance(List<Vehicle> vehicles)
             i++;
             Console.Write($"{i}) ");
             vehicle.DisplayInfo();
-            maintainable.GetFullInfoAboutMaintenance();
+            //maintainable.GetFullInfoAboutMaintenance();
         }
     }
 }

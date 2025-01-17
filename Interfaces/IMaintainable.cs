@@ -12,6 +12,7 @@ namespace Sana05.Interfaces
         public void ScheduleMaintenance(DateTime date);
         public bool IsUnderMaintenance { get; }
 
-        public void GetFullInfoAboutMaintenance();//додав цей метод для того, щоб показувати в головному меню всю інформацію про обслуговування,
+        //public void GetFullInfoAboutMaintenance();
+        //додав цей метод для того, щоб показувати в головному меню всю інформацію про обслуговування
     }
 }

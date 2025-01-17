@@ -33,13 +33,13 @@ namespace Sana05.Classes
             IsUnderMaintenance = true;
             Console.WriteLine($"Обслуговування {Model} заплановано на {maintenanceInfo.ScheduledDate.ToShortDateString()}, технік: {maintenanceInfo.Technician}");
         }
-        public void GetFullInfoAboutMaintenance()
+        /*public void GetFullInfoAboutMaintenance()
         {
             if (maintenanceInfo != null)
             {
                 Console.WriteLine($"   Обслуговування {Model} заплановано на {maintenanceInfo.ScheduledDate.ToShortDateString()}, технік: {maintenanceInfo.Technician}");
             }
             else Console.WriteLine($"   Для {Model} немає запланованого обслуговування.");
-        }
+        }*/
     }
 }
