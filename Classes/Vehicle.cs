@@ -8,7 +8,7 @@ namespace Sana05.Classes
 {
     public abstract class Vehicle
     {
-        protected string Model { get; set; }
+        public string Model { get; set; }
         protected string Manufacturer { get; set; }
         protected int Year { get; set; }
 

@@ -1,6 +1,8 @@
 ﻿using Sana05.Classes;
 using Sana05.Interfaces;
 using Sana05.Records;
+using System.Reflection;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 List<Vehicle> vehicles= new List<Vehicle>();
 vehicles.Add(new Car("Model S", "Tesla", 2022, 5));
@@ -103,11 +105,12 @@ static void ShowUnderMaintenance(List<Vehicle> vehicles)
     int i = 0;
     foreach (Vehicle vehicle in vehicles)
     {
-        if (vehicle is IMaintainable maintainable)
-        {
+        if (vehicle is IMaintainable maintainable && maintainable.IsUnderMaintenance)
+        {   
             i++;
             Console.Write($"{i}) ");
             vehicle.DisplayInfo();
+            maintainable.GetFullInfoAboutMaintenance();
         }
     }
 }

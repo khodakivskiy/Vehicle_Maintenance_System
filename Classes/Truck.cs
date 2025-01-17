@@ -11,7 +11,7 @@ namespace Sana05.Classes
     public class Truck : Vehicle, IMaintainable
     {
         protected double LoadCapacity {  get; set; }
-        public MaintenanceInfo? Maintenance { get; private set; }
+        public MaintenanceInfo? maintenanceInfo { get; private set; }
         public bool IsUnderMaintenance { get; private set; }
 
         public Truck(string model, string manufacturer, int year, double loadCapacity) : base(model, manufacturer, year) 
@@ -29,9 +29,17 @@ namespace Sana05.Classes
 
         public void ScheduleMaintenance(DateTime date)
         {
-            MaintenanceInfo maintenanceInfo = new MaintenanceInfo(date, "Петро");
+            maintenanceInfo = new MaintenanceInfo(date, "Петро");
             IsUnderMaintenance = true;
-            Console.WriteLine($"Обслуговування {Model} заплановано на {maintenanceInfo.ScheduledDate}, технік: {maintenanceInfo.Technician}");
+            Console.WriteLine($"Обслуговування {Model} заплановано на {maintenanceInfo.ScheduledDate.ToShortDateString()}, технік: {maintenanceInfo.Technician}");
+        }
+        public void GetFullInfoAboutMaintenance()
+        {
+            if (maintenanceInfo != null)
+            {
+                Console.WriteLine($"   Обслуговування {Model} заплановано на {maintenanceInfo.ScheduledDate.ToShortDateString()}, технік: {maintenanceInfo.Technician}");
+            }
+            else Console.WriteLine($"   Для {Model} немає запланованого обслуговування.");
         }
     }
 }
