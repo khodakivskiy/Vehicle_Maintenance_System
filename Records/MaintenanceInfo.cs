@@ -6,9 +6,5 @@ using System.Threading.Tasks;
 
 namespace Sana05.Records
 {
-    public record MaintenanceInfo
-    {
-        protected DateTime ScheduledDate { get; init; }
-        protected string Technician {  get; init; }
-    }
+    public record MaintenanceInfo(DateTime ScheduledDate, string Technician);
 }

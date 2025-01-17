@@ -19,7 +19,7 @@ namespace Sana05.Classes
         }
         public override void StartEngine()
         {
-            Console.WriteLine("Двигун вантажівки запущено.");
+            Console.WriteLine($"Електросамокат {Model} запущено.");
         }
     }
 }
